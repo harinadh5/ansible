@@ -1,0 +1,11 @@
+---
+- name: first playbook
+  hosts: all_hosts
+  become: yes
+  tasks:
+    - name: newfile creating
+      file:
+        path: /tmp/newfile1
+        owner: root
+        group: root
+        state: touch
